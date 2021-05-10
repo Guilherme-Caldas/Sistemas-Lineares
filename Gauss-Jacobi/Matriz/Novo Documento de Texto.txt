@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main (int argc, char** argv) 
+
+{
+    {
+    	
+	int i, j, n, m;
+	int matriz [n][m];
+    
+    i = 0;
+    j = 0;
+    n = 0;
+    m = 0;
+	
+	// Insere a quantidade de termos
+	
+	cout << "\n Numero de linhas da matriz = "; cin >> i;
+		while (i < 1 || i > 4)
+	{
+		cout << "\n Valor invalido!\n";
+		cout << "\n Numero de linhas da matriz = "; cin >> i;
+	}
+	
+	cout << "\n Numero de colunas da matriz = "; cin >> j;
+	    while (j < 1 || j > 4)
+	{
+		cout << "\n Valor invalido!\n";
+		cout << "\n Numero de colunas da matriz = "; cin >> j;
+	}
+	
+	// Armazenamento dos termos
+	
+	for (n = 0; n < i; n++)
+		for (m = 0; m < j; m++)
+	{
+		cout << "\n Elemento: [" << n + 1 << "][" << m + 1 << "] = "; 
+		cin >> (matriz [n][m]);
+	}
+	 
+	 
+	cout << ("\n\n******************* Saida de Dados ********************* \n\n");
+	 
+    
+    for (n = 0; n < i; n++)
+        for (m = 0; m < j; m++)
+    {
+	  cout << "\n Elemento: [" << n + 1 << "][" << m + 1 << "] = " << matriz [n][m] << "\n";
+    }
+    
+	if (matriz[0][0] < matriz[0][1] + matriz[0][2] + matriz[0][3])
+        {
+        	cout << "\n   ****** Matriz nao converge ******\n";
+		}
+		
+    }
+		system ("PAUSE");
+	return 0;
+}
